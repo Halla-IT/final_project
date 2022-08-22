@@ -1,0 +1,12 @@
+1. CDATA, PCDATA
+-XML 파서 : xml문서를 읽어들여 해석하는 프로그램
+
+-PCDATA : xml 문서에서 xml 파서에의해 처리될 부분
+			따로 지정하지 않으면 xml 문서전체
+
+-CDATA : xml 파서가 처리할 필요가 없는부분
+		mapper 파일에서 sql은 xml이 아니다 -> <![CDATA[ }}|> 이렇게 하면 xml이 아니다라는 뜻.
+		&lt; 는 야매
+-mapper에서 CDATA 처리가 꼭 필요한 경우
+	SQL에 < 문자가 포함된 경우
+		<![CDATA[~~~]]>
